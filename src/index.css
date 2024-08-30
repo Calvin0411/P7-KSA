@@ -88,12 +88,26 @@ header nav span {
   position: absolute; 
   bottom: 0;
   left: 0;
-  padding-left: 5px;
+  padding-left: 15px;
   padding-bottom: 5px;
-  font-size: 0.9em; 
+  font-size: 15px; 
   font-weight: 700;
   color: white;
   width: 100%; 
 }
 
+.footer {
+  padding: 50px;
+  text-align: center;
+  background-color: black; 
+}
+
+.footer-logo {
+  width: 100px; 
+  height: auto;
+}
+
+.footer p {
+  color: #FFFFFF;
+}
 

@@ -1,9 +1,10 @@
-// src/App.jsx
+
 import React from 'react';
 import Header from './components/jsx/header';
 import Banner from './components/jsx/banner';
 import { Card } from './components/jsx/cards';
-import cardsData from './data/cardsData'; // Importer les données
+import cardsData from './data/cardsData';
+import Footer from './components/jsx/footer'; 
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Card key={card.id} title={card.title} cover={card.cover} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
