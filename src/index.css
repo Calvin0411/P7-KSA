@@ -1,0 +1,57 @@
+/* Style de mon header */
+
+*{
+  font-family: Montserrat;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+header img {
+  width: 130px;
+}
+
+header nav {
+  display: flex;
+  gap: 50px;
+}
+
+header nav span {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/*Style pour ma bannière*/
+
+.banner {
+  position: relative;
+  margin-top: 2%;
+  margin-right:17%;
+  margin-left: 17%; 
+  overflow: hidden;
+}
+
+.banner-image {
+  display: block; 
+  width: 100%; 
+  height: auto; 
+}
+
+.banner-content {
+  position: absolute;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+  top: 35%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: white;
+  text-align: center
+}
