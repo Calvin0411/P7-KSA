@@ -2,6 +2,7 @@
 
 *{
   font-family: Montserrat;
+  margin: 0%;
 }
 
 header {
@@ -64,7 +65,7 @@ header nav span {
   flex-wrap: wrap; 
   gap: 27px; 
   padding: 3%; 
-  margin: 5% 17%; 
+  margin: 3% 17%; 
   background-color: #F6F6F6;
   border-radius: 25px;
 }
