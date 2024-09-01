@@ -16,7 +16,7 @@ function AboutInfo({ title, description }) {
         </button>
       </div>
       <div className={`description ${isVisible ? 'show' : 'hide'}`}>
-        <p>{description}</p>
+        <p className="descrition-about">{description}</p>
       </div>
     </div>
   );
