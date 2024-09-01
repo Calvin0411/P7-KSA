@@ -1,13 +1,14 @@
 import React from 'react';
-import logo from '../img/logo.png'; 
+import { Link } from 'react-router-dom'; 
+import logo from '../../assets/images/LOGO.png'; 
 
 function Header() {
   return (
     <header>
-      <img src={logo} alt="Logo de l'entreprise" />
+      <img src={logo} alt="Logo de KSA" />
       <nav>
-        <span>Accueil</span>
-        <span>A Propos</span>
+        <Link to="/">Accueil</Link> 
+        <Link to="/about">À Propos</Link>
       </nav>
     </header>
   );

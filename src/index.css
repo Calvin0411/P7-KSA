@@ -50,7 +50,7 @@ header nav span {
   font-size: 30px;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
-  top: 35%; 
+  top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
   color: white;
@@ -90,7 +90,7 @@ header nav span {
   bottom: 0;
   left: 0;
   padding-left: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   font-size: 15px; 
   font-weight: 700;
   color: white;
@@ -110,5 +110,5 @@ header nav span {
 
 .footer p {
   color: #FFFFFF;
+  padding: 15px;
 }
-
