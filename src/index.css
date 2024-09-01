@@ -112,3 +112,65 @@ header nav span {
   color: #FFFFFF;
   padding: 15px;
 }
+
+/*Style pour le composant info*/
+
+.about-info {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 20%;
+  margin-left: 20%;
+  border-radius: 5px;
+  overflow: hidden; 
+  background-color: #F6F6F6;
+}
+
+.content {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color:#FF6060;
+}
+
+
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 18px; 
+  color: white; 
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.toggle-button i {
+  transition: transform 0.3s ease; 
+}
+
+.toggle-button i.fa-chevron-down {
+  transform: rotate(0deg); 
+}
+
+.toggle-button i.fa-chevron-up {
+  transform: rotate(180deg);
+}
+
+.description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease, opacity 1s ease;
+}
+
+.description.show {
+  max-height: 800px;
+  padding: 1rem; 
+}
+
+.description.hide {
+  max-height: 0;
+  opacity: 0;
+  padding: 0; 
+}
+
