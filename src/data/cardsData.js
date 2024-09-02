@@ -1,5 +1,3 @@
-// src/data/cardsData.js
-
 const cardsData = [
     {
       "id": "c67ab8a7",

@@ -23,4 +23,3 @@ function AboutInfo({ title, description }) {
 }
 
 export default AboutInfo;
-
