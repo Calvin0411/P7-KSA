@@ -157,7 +157,6 @@ header nav span {
   transform: rotate(180deg);
 }
 
-/* styles.css */
 .description {
   max-height: 0;
   overflow: hidden;
@@ -187,3 +186,99 @@ header nav span {
   padding: 0 1rem; 
 }
 
+/*Style pour mes pages cartes*/
+
+.apartment-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carousel {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.carousel-button img {
+  width: 40px; 
+  height: 40px;
+}
+
+.carousel-indicator {
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  transform: translateX(50%);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.apartment-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #FF6B6B;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.host-info {
+  text-align: right;
+}
+
+.host-info img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.rating-stars {
+  display: flex;
+  margin-top: 10px;
+}
+
+.filled-star {
+  color: orange;
+}
+
+.empty-star {
+  color: gray;
+}

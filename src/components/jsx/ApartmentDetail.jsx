@@ -63,7 +63,33 @@ function ApartmentDetail() {
 
       <h1>{apartment.title}</h1>
 
-      
+      <div className="apartment-info">
+        <div>
+          <h3>{apartment.location}</h3>
+          <div className="tags">
+            {apartment.tags.map((tag, index) => (
+              <span key={index} className="tag">{tag}</span>
+            ))}
+          </div>
+        </div>
+
+        <div className="host-info">
+          <h4>{apartment.host.name}</h4>
+          <img src={apartment.host.picture} alt={apartment.host.name} className="host-picture" />
+          <div className="rating-stars">
+            {renderStars()}
+          </div>
+        </div>
+      </div>
+
+      <p>{apartment.description}</p>
+
+      <h3>Équipements:</h3>
+      <ul>
+        {apartment.equipments.map((equipment, index) => (
+          <li key={index}>{equipment}</li>
+        ))}
+      </ul>
     </div>
   );
 }
