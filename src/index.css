@@ -189,21 +189,21 @@ header nav span {
 /*Style pour mes pages cartes*/
 
 .apartment-detail {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 20px;
 }
 
 .carousel {
   position: relative;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .carousel-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 415px;
+  border-radius: 25px;
+  object-fit: cover;
 }
 
 .carousel-button {
@@ -223,8 +223,8 @@ header nav span {
 }
 
 .carousel-button img {
-  width: 40px; 
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 .carousel-indicator {
@@ -238,47 +238,174 @@ header nav span {
   font-size: 14px;
 }
 
+.apartment-title {
+  color: #FF6060;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.apartment-location {
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
 .apartment-info {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 5px;
   align-items: center;
 }
 
-.tags {
-  margin-top: 10px;
+.rating-stars {
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.filled-star {
+  color: #FF6060;
+}
+
+.empty-star {
+  color: gray;
 }
 
 .tag {
   display: inline-block;
-  background-color: #FF6B6B;
+  background-color: #FF6060;
   color: white;
   padding: 5px 10px;
   border-radius: 15px;
   margin-right: 10px;
   font-size: 12px;
-}
-
-.host-info {
-  text-align: right;
-}
-
-.host-info img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
   margin-top: 10px;
 }
 
-.rating-stars {
+.header-info {
   display: flex;
-  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.filled-star {
-  color: orange;
+.host-details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
 }
 
-.empty-star {
-  color: gray;
+.host-details h4 {
+  margin-right: 10px;
+  width: 93px;
+  font-size: 18px;
+  font-weight: 500;
+  direction: rtl;
+  color: #FF6060;
+}
+
+.host-picture {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.expandable-sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expandable-section {
+  flex: 1;
+  margin-top: 20px;
+  margin-right: 20px; 
+  margin-bottom: 20px; 
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #FF6060;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 10px; 
+  font-size: 18px;
+  transition: transform 0.3s ease; 
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-icon {
+  transform: rotate(180deg); 
+}
+
+.expandable-sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expandable-section {
+  flex: 1;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #FF6060;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.section-content {
+  height: 0; 
+  overflow: hidden;
+  transition: height 0.5s ease-in-out; 
+  background-color: #F6F6F6;
+  border-radius: 5px;
+}
+
+.toggle-checkbox:checked + .toggle-label + .section-content {
+  height: 150px; 
+}
+
+.section-content p, .section-content ul {
+  padding: 1rem;
+  margin: 0;
 }
