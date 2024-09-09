@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import cardsData from '../../data/cardsData';
 import leftArrow from '../../assets/images/vector_left.png';
 import rightArrow from '../../assets/images/vector_right.png';
+import DescriptionSection from './descriptionsection';
+import EquipmentsSection from './equipmentSection';
 
 function ApartmentDetail() {
   const { id } = useParams();
@@ -83,35 +85,14 @@ function ApartmentDetail() {
       </div>
 
       <div className="expandable-sections">
-        <div className="expandable-section">
-          <input type="checkbox" id="toggle-description" className="toggle-checkbox" />
-          <label htmlFor="toggle-description" className="toggle-label">
-            <span className="toggle-icon">v</span>
-            <span>Description</span>
-          </label>
-          <div className="section-content">
-            <p>{apartment.description}</p>
-          </div>
-        </div>
-
-        <div className="expandable-section">
-          <input type="checkbox" id="toggle-equipments" className="toggle-checkbox" />
-          <label htmlFor="toggle-equipments" className="toggle-label">
-            <span className="toggle-icon">v</span>
-            <span>Équipements</span>
-          </label>
-          <div className="section-content">
-            <ul>
-              {apartment.equipments.map((equipment, index) => (
-                <li key={index}>{equipment}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <DescriptionSection content={apartment.description} uniqueId="toggle-description" />
+        <EquipmentsSection equipments={apartment.equipments} uniqueId="toggle-equipments" />
       </div>
     </div>
   );
 }
 
 export default ApartmentDetail;
+
+
 

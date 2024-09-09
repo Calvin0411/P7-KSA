@@ -23,10 +23,13 @@ header nav {
   gap: 50px;
 }
 
-header nav span {
-  cursor: pointer;
-  font-size: 15px;
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 /*Style pour ma bannière*/
@@ -116,10 +119,7 @@ header nav span {
 /*Style pour le composant info*/
 
 .about-info-container {
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-right: 20%;
-  margin-left: 20%;
+  margin: 2% 20%; /* Centrage avec marges */
   border-radius: 5px;
   overflow: hidden;
   background-color: #F6F6F6;
@@ -129,10 +129,10 @@ header nav span {
   display: none;
 }
 
-.about-info-label {
+.about-info-header {
   display: flex;
+  justify-content: space-between; 
   align-items: center;
-  cursor: pointer;
   background-color: #FF6060;
   color: white;
   padding: 10px;
@@ -140,32 +140,42 @@ header nav span {
   position: relative;
 }
 
-.about-info-icon {
-  position: absolute;
-  right: 10px;
-  font-size: 18px;
-  transition: transform 0.5s ease;
+.about-info-icon-label {
+  cursor: pointer;
+  position: relative;
 }
 
-.about-info-checkbox:checked + .about-info-label .about-info-icon {
+.about-info-icon {
+  font-size: 18px;
+  transition: transform 0.5s ease;
+  position: absolute;
+  right: 10px;
+  top: -10px;
+}
+
+/* Rotation de l'icône quand la checkbox est cochée */
+.about-info-checkbox:checked + .about-info-header .about-info-icon-label .about-info-icon {
   transform: rotate(180deg);
 }
 
+/* Le contenu est caché initialement */
 .about-info-content {
-  max-height: 0; 
+  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out; 
+  transition: max-height 0.5s ease-in-out;
   background-color: #F6F6F6;
   border-radius: 5px;
 }
 
-.about-info-checkbox:checked + .about-info-label + .about-info-content {
-  max-height: 1000px; 
+/* Affichage du contenu quand la checkbox est cochée */
+.about-info-checkbox:checked + .about-info-header + .about-info-content {
+  max-height: 500px;
 }
 
 .about-info-content p {
   padding: 1rem;
 }
+
 
 /*Style pour mes pages cartes*/
 
@@ -300,62 +310,22 @@ header nav span {
 
 .expandable-sections {
   display: flex;
-  justify-content: space-between;
-}
-
-.expandable-section {
-  flex: 1;
+  justify-content: space-between; 
   margin-top: 20px;
-  margin-right: 20px; 
-  margin-bottom: 20px; 
-}
-
-.toggle-checkbox {
-  display: none;
-}
-
-.toggle-label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  background-color: #FF6060;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  position: relative;
-}
-
-.toggle-icon {
-  position: absolute;
-  right: 10px; 
-  font-size: 18px;
-  transition: transform 0.3s ease; 
-}
-
-.toggle-checkbox:checked + .toggle-label .toggle-icon {
-  transform: rotate(180deg); 
-}
-
-.expandable-sections {
-  display: flex;
-  justify-content: space-between;
-}
-
-.expandable-section {
-  flex: 1;
-  margin-top: 20px;
-  margin-right: 20px;
   margin-bottom: 20px;
 }
 
+.expandable-section {
+  width: 45%;
+}
+
 .toggle-checkbox {
   display: none;
 }
 
-.toggle-label {
+.toggle-header {
   display: flex;
-  align-items: center;
-  cursor: pointer;
+  justify-content: space-between;
   background-color: #FF6060;
   color: white;
   padding: 10px;
@@ -363,30 +333,42 @@ header nav span {
   position: relative;
 }
 
+.toggle-icon-label {
+  display: flex;
+  align-items: center;
+}
+
 .toggle-icon {
-  position: absolute;
-  right: 10px;
   font-size: 18px;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.toggle-checkbox:checked + .toggle-label .toggle-icon {
+.toggle-checkbox:checked + .toggle-header .toggle-icon {
   transform: rotate(180deg);
 }
 
 .section-content {
-  height: 0; 
+  height: 0;
   overflow: hidden;
-  transition: height 0.5s ease-in-out; 
+  transition: height 1s ease-in-out;
   background-color: #F6F6F6;
   border-radius: 5px;
 }
 
-.toggle-checkbox:checked + .toggle-label + .section-content {
+.toggle-checkbox:checked + .toggle-header + .section-content {
   height: 150px; 
 }
 
 .section-content p, .section-content ul {
+  list-style-type: none;
   padding: 1rem;
   margin: 0;
 }
+
+
+
+/*Responsive*/
+
+
+
