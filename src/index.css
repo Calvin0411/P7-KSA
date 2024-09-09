@@ -115,75 +115,56 @@ header nav span {
 
 /*Style pour le composant info*/
 
-.about-info {
+.about-info-container {
   margin-top: 2%;
   margin-bottom: 2%;
   margin-right: 20%;
   margin-left: 20%;
   border-radius: 5px;
-  overflow: hidden; 
+  overflow: hidden;
   background-color: #F6F6F6;
 }
 
-.content {
-  padding: 1rem;
+.about-info-checkbox {
+  display: none;
+}
+
+.about-info-label {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  color: white;
-  background-color:#FF6060;
-}
-
-
-
-.toggle-button {
-  background: none;
-  border: none;
-  font-size: 18px; 
-  color: white; 
   cursor: pointer;
-  transition: transform 0.3s ease;
+  background-color: #FF6060;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
 }
 
-.toggle-button i {
-  transition: transform 0.3s ease; 
+.about-info-icon {
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  transition: transform 0.5s ease;
 }
 
-.toggle-button i.fa-chevron-down {
-  transform: rotate(0deg); 
-}
-
-.toggle-button i.fa-chevron-up {
+.about-info-checkbox:checked + .about-info-label .about-info-icon {
   transform: rotate(180deg);
 }
 
-.description {
-  max-height: 0;
+.about-info-content {
+  max-height: 0; 
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out; 
+  background-color: #F6F6F6;
+  border-radius: 5px;
 }
 
-.description.show {
-  max-height: 300px; 
+.about-info-checkbox:checked + .about-info-label + .about-info-content {
+  max-height: 1000px; 
 }
 
-.descrition-about {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, padding-top 0.5s ease-in-out, padding-bottom 0.5s ease-in-out;
-  padding: 0 1rem;
-}
-
-.description.show .descrition-about {
-  opacity: 1;
-  transform: translateY(0);
-  padding: 1rem 1rem;
-}
-
-.description.hide .descrition-about {
-  opacity: 0;
-  transform: translateY(-10px);
-  padding: 0 1rem; 
+.about-info-content p {
+  padding: 1rem;
 }
 
 /*Style pour mes pages cartes*/

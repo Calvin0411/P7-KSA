@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function AboutInfo({ title, description }) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const handleToggle = () => {
-    setIsVisible(!isVisible);
-  };
-
   return (
-    <div className="about-info">
-      <div className="content">
+    <div className="about-info-container">
+      <input type="checkbox" id={`toggle-${title}`} className="about-info-checkbox" />
+      <label htmlFor={`toggle-${title}`} className="about-info-label">
+        <span className="about-info-icon">v</span>
         <h2>{title}</h2>
-        <button className="toggle-button" onClick={handleToggle}>
-          <i className="fa-solid fa-v"></i>
-        </button>
-      </div>
-      <div className={`description ${isVisible ? 'show' : 'hide'}`}>
-        <p className="descrition-about">{description}</p>
+      </label>
+      <div className="about-info-content">
+        <p>{description}</p>
       </div>
     </div>
   );
