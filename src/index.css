@@ -129,7 +129,6 @@ a:hover {
   margin: 2% 20%; 
   border-radius: 5px;
   overflow: hidden;
-  background-color: #F6F6F6;
 }
 
 .about-info-checkbox {
@@ -248,27 +247,49 @@ a:hover {
   font-size: 18px;
 }
 
-.apartment-info {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5px;
-  align-items: center;
+.apartment-detail {
+  padding: 20px;
 }
 
-.rating-stars {
-  display: flex;
-  margin-top: 5px;
-  justify-content: space-between;
-  gap: 10px;
-  font-size: 20px;
+.info-container {
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 20px;
 }
 
-.filled-star {
+.info-left-tags, .host-details-rating {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.info-left-tags {
+  margin-right: 20px;
+}
+
+.host-details-rating {
+  align-items: flex-end; 
+}
+
+/* Styles pour les infos de gauche */
+.info-left {
+  font-size: 18px;
+}
+
+.apartment-title {
   color: #FF6060;
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
-.empty-star {
-  color: gray;
+.apartment-location {
+  font-weight: 500;
+  font-size: 16px;
+  color: #555;
+}
+
+.tags {
+  margin-top: 10px;
 }
 
 .tag {
@@ -282,12 +303,7 @@ a:hover {
   margin-top: 10px;
 }
 
-.header-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
+/* Styles pour les détails de l'hôte */
 .host-details {
   display: flex;
   align-items: center;
@@ -296,10 +312,8 @@ a:hover {
 
 .host-details h4 {
   margin-right: 10px;
-  width: 93px;
   font-size: 18px;
   font-weight: 500;
-  direction: rtl;
   color: #FF6060;
 }
 
@@ -309,10 +323,21 @@ a:hover {
   height: 60px;
 }
 
-.section-header {
+/* Styles pour les étoiles  */
+.rating-stars {
   display: flex;
+  margin-top: 10px;
   justify-content: space-between;
-  cursor: pointer;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.filled-star {
+  color: #FF6060;
+}
+
+.empty-star {
+  color: gray;
 }
 
 .expandable-sections {
@@ -455,5 +480,14 @@ a:hover {
       color: #FFFFFF;
       padding: 15px;
     }
+
+    .about-info-container {
+      margin: 2% 2%; 
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #F6F6F6;
+    }
+    
+
 
 }

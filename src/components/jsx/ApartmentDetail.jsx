@@ -62,27 +62,29 @@ function ApartmentDetail() {
         </div>
       </div>
 
-      <div className="header-info">
-        <div className="info-left">
-          <h1 className="apartment-title">{apartment.title}</h1>
-          <p className="apartment-location">{apartment.location}</p>
-        </div>
-        <div className="host-details">
-          <h4>{apartment.host.name}</h4>
-          <img src={apartment.host.picture} alt={apartment.host.name} className="host-picture" />
-        </div>
-      </div>
-
-      <div className="apartment-info">
-        <div className="tags">
-          {apartment.tags.map((tag, index) => (
+      <div className="info-container">
+        <div className="info-left-tags">
+          <div className="info-left">
+            <h1 className="apartment-title">{apartment.title}</h1>
+            <p className="apartment-location">{apartment.location}</p>
+          </div>
+          <div className="tags">
+            {apartment.tags.map((tag, index) => (
             <span key={index} className="tag">{tag}</span>
-          ))}
-        </div>
-        <div className="rating-stars">
-          {renderStars()}
-        </div>
+           ))}
       </div>
+    </div>
+
+    <div className="host-details-rating">
+      <div className="host-details">
+        <h4>{apartment.host.name}</h4>
+        <img src={apartment.host.picture} alt={apartment.host.name} className="host-picture" />
+      </div>
+      <div className="rating-stars">
+        {renderStars()}
+      </div>
+    </div>
+  </div>
 
       <div className="expandable-sections">
         <DescriptionSection content={apartment.description} uniqueId="toggle-description" />
@@ -93,6 +95,3 @@ function ApartmentDetail() {
 }
 
 export default ApartmentDetail;
-
-
-
