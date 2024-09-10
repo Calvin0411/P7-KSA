@@ -31,6 +31,9 @@ a {
   font-weight: 500;
   cursor: pointer;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 /*Style pour ma bannière*/
 
@@ -68,13 +71,17 @@ a {
   flex-wrap: wrap; 
   gap: 27px; 
   padding: 3%; 
-  margin: 3% 17%; 
+  margin-left: 17%;
+  margin-right: 17%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   background-color: #F6F6F6;
   border-radius: 25px;
 }
 
 .card {
-  width: calc(33.333% - 27px); 
+  flex: 1 1 calc(33.333% - 27px); 
+  max-width: calc(33.333% - 27px); 
   height: 340px;
   text-align: left;
   border-radius: 10px; 
@@ -119,7 +126,7 @@ a {
 /*Style pour le composant info*/
 
 .about-info-container {
-  margin: 2% 20%; /* Centrage avec marges */
+  margin: 2% 20%; 
   border-radius: 5px;
   overflow: hidden;
   background-color: #F6F6F6;
@@ -357,18 +364,96 @@ a {
 }
 
 .toggle-checkbox:checked + .toggle-header + .section-content {
-  height: 150px; 
+  height: 170px; 
 }
 
 .section-content p, .section-content ul {
   list-style-type: none;
   padding: 1rem;
-  margin: 0;
+ font-weight: 400;
 }
-
-
 
 /*Responsive*/
 
+@media (max-width: 768px) {
+  /* Styles pour les écrans inférieur à  à 768px */
+
+  header {
+    display: flex;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  
+  header img {
+    width: 180px;
+  }
+  
+  header nav {
+    display: flex;
+    gap: 25px;
+  }
+  
+  a {
+    font-size: 15px;
+  }
+  
+  .banner {
+    position: relative;
+    margin-top: 2%;
+    margin-right:0%;
+    margin-left: 0%; 
+    padding: 15px 25px;
+    overflow: hidden;
+  }
+  
+  .banner-image {
+    display: block; 
+    width: 100%;
+    height: 111px;
+  }
+  
+  .banner-content {
+    width: 50%;
+    height: 48px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    top: 50%; 
+    left: 50px; 
+    transform: translateY(-50%); /* Seulement centrer verticalement */
+    color: white;
+    text-align: start;
+  }
+
+  /* Style pour mes cartes*/
+
+    .cards-container {
+      margin-left: 5%; 
+      margin-right: 5%;
+    }
+
+    .card {
+      flex: 1 1 100%; 
+      max-width: 100%; 
+    }
 
 
+    .footer {
+      padding: 50px;
+      text-align: center;
+      background-color: black; 
+    }
+
+    .footer-logo {
+      width: 120px; 
+      height: auto;
+    }
+
+    .footer p {
+      font-size: 10px;
+      color: #FFFFFF;
+      padding: 15px;
+    }
+
+}
