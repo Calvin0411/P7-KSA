@@ -18,9 +18,3 @@ const DescriptionSection = ({ content, uniqueId }) => {
 };
 
 export default DescriptionSection;
-
-
-
-
-
-
