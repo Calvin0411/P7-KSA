@@ -205,7 +205,7 @@ a:hover {
 
 .carousel-button {
   position: absolute;
-  top: 50%;
+  top: 45%;
   background: none;
   border: none;
   cursor: pointer;
@@ -220,8 +220,8 @@ a:hover {
 }
 
 .carousel-button img {
-  width: 50px;
-  height: 50px;
+  width: 46.68px;
+  height: 79.2px;
 }
 
 .carousel-indicator {
@@ -518,6 +518,11 @@ a:hover {
       height: 255px;
       border-radius: 25px;
       object-fit: cover;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 35%;
     }
 
     .apartment-detail{
