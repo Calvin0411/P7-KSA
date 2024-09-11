@@ -12,7 +12,7 @@ function ApartmentDetail() {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
   if (!apartment) {
-    return <h2>Appartement non trouvé</h2>;
+    return <h2 className='appart-not-found'>Appartement non trouvé</h2>;
   }
 
   const handlePrev = () => {

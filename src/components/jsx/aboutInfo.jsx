@@ -1,4 +1,5 @@
 import React from 'react';
+import vectorImage from '../../assets/images/Vector.png';
 
 function AboutInfo({ title, description }) {
   return (
@@ -7,7 +8,7 @@ function AboutInfo({ title, description }) {
       <div className="about-info-header">
         <h2>{title}</h2>
         <label htmlFor={`toggle-${title}`} className="about-info-icon-label">
-          <span className="about-info-icon">v</span>
+          <img src={vectorImage} alt="Toggle" className="about-info-icon" />
         </label>
       </div>
       <div className="about-info-content">

@@ -1,4 +1,5 @@
 import React from 'react';
+import vectorImage from '../../assets/images/Vector.png';
 
 const DescriptionSection = ({ content, uniqueId }) => {
   return (
@@ -7,7 +8,7 @@ const DescriptionSection = ({ content, uniqueId }) => {
       <div className="toggle-header">
         <h2>Description</h2>
         <label htmlFor={uniqueId} className="toggle-icon-label">
-          <span className="toggle-icon">v</span>
+          <img src={vectorImage} alt="Toggle" className="toggle-icon" />
         </label>
       </div>
       <div className="section-content">

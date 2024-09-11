@@ -2,12 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/jsx/header';
 import Banner from './components/jsx/banner';
-import { Card } from './components/jsx/cards';
-import cardsData from './data/cardsData';
 import Footer from './components/jsx/footer';
 import About from './components/jsx/about';
 import ApartmentDetail from './components/jsx/ApartmentDetail';
 import Error404 from './components/jsx/error-404';
+import { CardsContainer } from './components/jsx/cards'; // Assure-toi que le chemin est correct
 
 function App() {
   return (
@@ -17,11 +16,7 @@ function App() {
         <Route path="/" element={
           <div>
             <Banner />
-            <div className="cards-container">
-              {cardsData.map(card => (
-                <Card key={card.id} id={card.id} title={card.title} cover={card.cover} />
-              ))}
-            </div>
+            <CardsContainer />
           </div>
         } />
         <Route path="/about" element={<About />} />
