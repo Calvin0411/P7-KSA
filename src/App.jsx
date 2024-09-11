@@ -7,6 +7,7 @@ import cardsData from './data/cardsData';
 import Footer from './components/jsx/footer';
 import About from './components/jsx/about';
 import ApartmentDetail from './components/jsx/ApartmentDetail';
+import Error404 from './components/jsx/error-404';
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
           </div>
         } />
         <Route path="/about" element={<About />} />
-        <Route path="/apartment/:id" element={<ApartmentDetail />} /> 
+        <Route path="/apartment/:id" element={<ApartmentDetail />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
     </Router>
