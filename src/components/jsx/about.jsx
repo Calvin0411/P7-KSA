@@ -1,6 +1,6 @@
 import React from 'react';
 import BannerAbout from './BannerAbout';
-import AboutInfo from './aboutInfo';
+import ExpandableSection from './expendablesection';
 
 function About() {
   const infoData = [
@@ -17,7 +17,7 @@ function About() {
     {
       id: 2,
       title: 'Service',
-      description: 'La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et  de bienveillance.'
+      description: 'La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance.'
     },
     {
       id: 3,
@@ -31,7 +31,12 @@ function About() {
       <BannerAbout />
       <div className="about-content">
         {infoData.map(info => (
-          <AboutInfo key={info.id} title={info.title} description={info.description} />
+          <ExpandableSection
+            key={info.id}
+            title={info.title}
+            content={info.description}
+            uniqueId={`toggle-${info.title}`}
+          />
         ))}
       </div>
     </div>

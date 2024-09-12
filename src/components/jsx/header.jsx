@@ -5,7 +5,9 @@ import logo from '../../assets/images/LOGO.png';
 function Header() {
   return (
     <header>
-      <img src={logo} alt="Logo de KSA" />
+      <h1>
+        <img src={logo} alt="Logo de KASA" />
+      </h1>
       <nav>
         <Link to="/">Accueil</Link> 
         <Link to="/about">À Propos</Link>
