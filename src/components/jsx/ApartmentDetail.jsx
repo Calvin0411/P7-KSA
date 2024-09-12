@@ -4,6 +4,7 @@ import cardsData from '../../data/cardsData';
 import leftArrow from '../../assets/images/vector_left.png';
 import rightArrow from '../../assets/images/vector_right.png';
 import ExpandableSection from './expendablesection';
+import Error404 from './error-404';
 
 function ApartmentDetail() {
   const { id } = useParams();
