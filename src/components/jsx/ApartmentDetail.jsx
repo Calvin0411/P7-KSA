@@ -5,6 +5,7 @@ import leftArrow from '../../assets/images/vector_left.png';
 import rightArrow from '../../assets/images/vector_right.png';
 import DescriptionSection from './descriptionsection';
 import EquipmentsSection from './equipmentSection';
+import Error404 from './error-404';
 
 function ApartmentDetail() {
   const { id } = useParams();
@@ -12,7 +13,7 @@ function ApartmentDetail() {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
   if (!apartment) {
-    return <h2 className='appart-not-found'>Appartement non trouvé</h2>;
+    return <Error404 />;
   }
 
   const handlePrev = () => {
@@ -43,9 +44,16 @@ function ApartmentDetail() {
   return (
     <div className="apartment-detail">
       <div className="carousel">
-        <button className="carousel-button left" onClick={handlePrev}>
-          <img src={leftArrow} alt="Précédent" />
-        </button>
+        {apartment.pictures.length > 1 && (
+          <>
+            <button className="carousel-button left" onClick={handlePrev}>
+              <img src={leftArrow} alt="Précédent" />
+            </button>
+            <button className="carousel-button right" onClick={handleNext}>
+              <img src={rightArrow} alt="Suivant" />
+            </button>
+          </>
+        )}
 
         <img
           src={apartment.pictures[currentImageIndex]}
@@ -53,13 +61,11 @@ function ApartmentDetail() {
           className="carousel-image"
         />
 
-        <button className="carousel-button right" onClick={handleNext}>
-          <img src={rightArrow} alt="Suivant" />
-        </button>
-
-        <div className="carousel-indicator">
-          {currentImageIndex + 1}/{apartment.pictures.length}
-        </div>
+        {apartment.pictures.length > 1 && (
+          <div className="carousel-indicator">
+            {currentImageIndex + 1}/{apartment.pictures.length}
+          </div>
+        )}
       </div>
 
       <div className="info-container">
@@ -70,21 +76,19 @@ function ApartmentDetail() {
           </div>
           <div className="tags">
             {apartment.tags.map((tag, index) => (
-            <span key={index} className="tag">{tag}</span>
-           ))}
-      </div>
-    </div>
+              <span key={index} className="tag">{tag}</span>
+            ))}
+          </div>
+        </div>
 
-    <div className="host-details-rating">
-      <div className="host-details">
-        <h4>{apartment.host.name}</h4>
-        <img src={apartment.host.picture} alt={apartment.host.name} className="host-picture" />
+        <div className="host-details-rating">
+          <div className="host-details">
+            <h4>{apartment.host.name}</h4>
+            <img src={apartment.host.picture} alt={apartment.host.name} className="host-picture" />
+          </div>
+          <div className="rating-stars">{renderStars()}</div>
+        </div>
       </div>
-      <div className="rating-stars">
-        {renderStars()}
-      </div>
-    </div>
-  </div>
 
       <div className="expandable-sections">
         <DescriptionSection content={apartment.description} uniqueId="toggle-description" />
