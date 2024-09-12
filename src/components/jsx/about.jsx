@@ -1,6 +1,7 @@
 import React from 'react';
-import BannerAbout from './BannerAbout';
+import Banner from './banner';
 import ExpandableSection from './expendablesection';
+import bannerAbout from '../../assets/images/banner-about.png'; 
 
 function About() {
   const infoData = [
@@ -22,13 +23,15 @@ function About() {
     {
       id: 3,
       title: 'Sécurité',
-      description: 'La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l hote qu au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous  organisons également des ateliers sur la sécurité domestique pour nos hôtes. '
+      description: 'La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l hote qu au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous  organisons également des ateliers sur la sécurité domestique pour nos hôtes.'
     },
   ];
 
   return (
     <div>
-      <BannerAbout />
+      <Banner 
+        bannerImage={bannerAbout} 
+      />
       <div className="about-content">
         {infoData.map(info => (
           <ExpandableSection
