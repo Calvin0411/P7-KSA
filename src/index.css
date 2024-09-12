@@ -69,6 +69,7 @@ a:hover {
 .cards-container {
   display: flex; 
   flex-wrap: wrap; 
+  justify-content: center;
   gap: 27px; 
   padding: 3%; 
   margin-left: 17%;
@@ -373,7 +374,7 @@ a:hover {
 }
 
 .toggle-icon {
-  font-size: 18px;
+  width: 100%;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -620,6 +621,18 @@ a:hover {
     }
     .section-content{
       font-size: 12px;
+    }
+
+    .toggle-icon {
+      width: 15px;;
+    }
+
+    .toggle-checkbox:checked + .toggle-header + .section-content {
+      height: 150px; 
+    }
+
+    .appart-not-found{
+        font-size: 35px;
     }
     
     .error-container{
