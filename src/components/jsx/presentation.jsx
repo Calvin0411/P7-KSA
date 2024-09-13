@@ -30,7 +30,7 @@ function Presentation({ apartment }) {
 
       <div className="host-details-rating">
         <div className="host-details">
-          <h4>{apartment.host.name}</h4>
+          <h3>{apartment.host.name}</h3>
           <img src={apartment.host.picture} alt={apartment.host.name} className="host-picture" />
         </div>
         <div className="rating-stars">

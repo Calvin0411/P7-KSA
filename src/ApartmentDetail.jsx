@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import cardsData from '../../data/cardsData';
-import Slider from './slider';
-import ExpandableSection from './expendablesection';
-import Presentation from './presentation';
-import Error404 from './error-404';
+import cardsData from './data/cardsData';
+import Slider from './components/jsx/slider';
+import ExpandableSection from './components/jsx/expendablesection';
+import Presentation from './components/jsx/presentation';
+import Error404 from './components/jsx/error-404';
 
 function ApartmentDetail() {
   const { id } = useParams();

@@ -1,7 +1,7 @@
 import React from 'react';
-import Banner from './banner';
-import ExpandableSection from './expendablesection';
-import bannerAbout from '../../assets/images/banner-about.png'; 
+import Banner from './components/jsx/banner';
+import ExpandableSection from './components/jsx/expendablesection';
+import bannerAbout from "./assets/images/banner-about.png";
 
 function About() {
   const infoData = [
