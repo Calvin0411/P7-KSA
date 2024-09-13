@@ -381,7 +381,7 @@ a:hover {
       font-weight: 500;
       color: black;
       padding-bottom: 100px;
-    }
+  }
 }
     .appart-not-found{
       display: flex;
@@ -606,5 +606,5 @@ a:hover {
         a {
           font-size: 14px;
         }
-    }
+  }
 }
