@@ -395,8 +395,8 @@ a:hover {
 
 /*Responsive*/
 
-@media (max-width: 390px) {
-  /* Styles pour les écrans inférieur à  à 768px */
+@media (max-width: 728px) {
+  /* Styles pour les écrans inférieur à  à 728px */
 
   header {
     display: flex;
@@ -405,7 +405,7 @@ a:hover {
   }
   
   header img {
-    width: 125px;
+    width: 110px;
   }
   
   header nav {
@@ -414,7 +414,7 @@ a:hover {
   }
   
   a {
-    font-size: 15px;
+    font-size: 12px;
   }
   
   .banner {
