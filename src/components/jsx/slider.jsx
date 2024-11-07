@@ -39,7 +39,8 @@ const Slider = ({ pictures }) => {
           <div className="carousel-indicator">
             {currentImageIndex + 1}/{pictures.length}
           </div>
-        </>
+        </> 
+        
       )}
       {pictures.length === 1 && (
         <img
