@@ -1,7 +1,6 @@
 import React from 'react';
-import leftArrow from '@/assets/images/vector_left.png';
-import rightArrow from '@/assets/images/vector_right.png';
-
+import leftArrow from '../../assets/images/Vector_left.png';
+import rightArrow from '../../assets/images/Vector_right.png';
 
 
 const Slider = ({ pictures }) => {
@@ -41,7 +40,7 @@ const Slider = ({ pictures }) => {
             {currentImageIndex + 1}/{pictures.length}
           </div>
         </> 
-
+        
       )}
       {pictures.length === 1 && (
         <img
