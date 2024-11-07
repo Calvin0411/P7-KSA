@@ -2,6 +2,7 @@ import React from 'react';
 import leftArrow from '../../assets/images/vector_left.png';
 import rightArrow from '../../assets/images/vector_right.png';
 
+
 const Slider = ({ pictures }) => {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
